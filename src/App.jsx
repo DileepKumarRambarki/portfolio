@@ -21,6 +21,8 @@ import javacert from "./images/java.png"
 import jscert from "./images/javascript.png"
 import responsive from "./images/responsive_web.png"
 import Experience from "components/Experience/Experience"
+import gcrs from "./images/gcrs.png"
+import gate from "./images/gate.jpg"
 // Animation
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -40,69 +42,81 @@ function App() {
     },
     {id:"projects",title:"Responsive web design",tagline:"Free code camp",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:responsive
     },
+    {id:"projects",title:"Qualified GATE-2025 (CS) with AIR 4862",tagline:"hi",category:"achievements",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:gate
+    },
 
   ])
 
-  const [services, setServices] = useState([{title:"programming languages",tags:['C','Java','Javascript','Python'],icon:programmingicon},{title:"Libraries/Frame works",tags:['React Js',"Node js",'Express Js','Material UI'],icon:librayricon},{title:"Tools/Platforms",tags:['Github','Postman','VScode'],icon:toolicon},{title:"Databases",tags:['MongoDB','MySQL'],icon:databaseicon}])
+  const [services, setServices] = useState([
+    {title:"programming languages",tags:['C','Java','Javascript','Python'],icon:programmingicon},
+    {title:"Libraries/Frame works",tags:['React Js',"Node js",'Express Js','Material UI'],icon:librayricon},
+    {title:"Tools/Platforms",tags:['Github','Postman','VScode'],icon:toolicon},
+    {title:"Databases",tags:['MongoDB','MySQL'],icon:databaseicon}
+  ])
 
-  const [testimonials, setTestimonials] = useState([])
+  // const [testimonials, setTestimonials] = useState([])
+  const exps=[
+    { role:"CEO", company:"Sonic solutions", location:"WasingTon DC", icon:gcrs, duration:"jan 2020-feb 2022", desc:['gained hands on experience on backend developement using python','explored google cloud storage buckets using python','enhanced api response time by 80%'] },
+    { role:"Software engineer intern", company:"Geo Climate Risk solutions", location:"Onsite visakhapatnam", icon:gcrs, duration:"May 2025-July 2025", desc:['gained hands on experience on backend developement using python','explored google cloud storage buckets using python','enhanced api response time by 80%'] },
+    { role:"Software engineer intern", company:"Geo Climate Risk solutions", location:"Onsite visakhapatnam", icon:gcrs, duration:"May 2025-July 2025", desc:['gained hands on experience on backend developement using python','explored google cloud storage buckets using python','enhanced api response time by 80%'] },
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type in ["testimonial", "portfolio","service"]]{
-          _type == "testimonial" => {
-            id,
-            name,
-            text,
-            country,
-            url
-          },
-          _type == "portfolio" => {
-            id,
-            title,
-            tagline,
-            category,
-            liveUrl,
-            repositoryUrl,
-            img{
-              asset->{url}
-            },
-          },
-          _type == "service" => {
-            title,
-            tags,
-            icon{
-              asset->{url}
-            },
-          },
-        }
-        `
-      )
-      .then((data) => {
-        let tempTestimonials = []
-        let tempProjects = []
-        let tempServices = []
+  ]
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `*[_type in ["testimonial", "portfolio","service"]]{
+  //         _type == "testimonial" => {
+  //           id,
+  //           name,
+  //           text,
+  //           country,
+  //           url
+  //         },
+  //         _type == "portfolio" => {
+  //           id,
+  //           title,
+  //           tagline,
+  //           category,
+  //           liveUrl,
+  //           repositoryUrl,
+  //           img{
+  //             asset->{url}
+  //           },
+  //         },
+  //         _type == "service" => {
+  //           title,
+  //           tags,
+  //           icon{
+  //             asset->{url}
+  //           },
+  //         },
+  //       }
+  //       `
+  //     )
+  //     .then((data) => {
+  //       let tempTestimonials = []
+  //       let tempProjects = []
+  //       let tempServices = []
 
-        data.map((doc) => {
-          if (doc.country) {
-            // It is a testimonial
-            tempTestimonials.push(doc)
-          } else if (doc.liveUrl) {
-            // It is a project
-            tempProjects.push(doc)
-          } else {
-            tempServices.push(doc)
-          }
+  //       data.map((doc) => {
+  //         if (doc.country) {
+  //           // It is a testimonial
+  //           tempTestimonials.push(doc)
+  //         } else if (doc.liveUrl) {
+  //           // It is a project
+  //           tempProjects.push(doc)
+  //         } else {
+  //           tempServices.push(doc)
+  //         }
 
-          return null
-        })
-        // setTestimonials(tempTestimonials)
-        // setProjects(tempProjects)
-        // setServices(tempServices)
-      })
-      .catch(console.error)
-  }, [])
+  //         return null
+  //       })
+  //       // setTestimonials(tempTestimonials)
+  //       // setProjects(tempProjects)
+  //       // setServices(tempServices)
+  //     })
+  //     .catch(console.error)
+  // }, [])
 
   useEffect(() => {
     Aos.init({ duration: 2000, offset: 10 })
@@ -113,11 +127,10 @@ function App() {
       <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Home />
-      <h1>Experience</h1>
-      <Experience role="software engineer intern" company="gcrs" desc="jai balayya" />
+      <Experience exps={exps}/>
       <Services services={services} />
       <Portfolio projects={projects} />
-      <Testimonials testimonials={testimonials} />
+      {/* <Testimonials testimonials={testimonials} /> */}
       <Contact />
       <Footer />
     </div>
