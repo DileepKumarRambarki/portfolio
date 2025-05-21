@@ -15,13 +15,13 @@ const Services = ({ services }) => {
       name="services"
       id="services"
     >
-      <Heading text="Services" />
+      <Heading text="Skills" />
       <div className="services-cards">
         {services &&
           services?.map(({ title, icon, tags }, index) => (
             <ServicesCard
               key={index}
-              image={icon.asset.url}
+              image={icon}
               title={title}
               tags={tags}
             />

@@ -9,17 +9,41 @@ import Contact from "components/Contact/Contact"
 import Services from "components/Services/Services"
 import Testimonials from "components/Testimonials/Testimonials"
 import Footer from "components/Footer/Footer"
-// Sanity
 import sanityClient from "client"
-
+import programmingicon from "./images/programming.jpeg"
+import librayricon from "./images/libraries.png"
+import toolicon from "./images/tools.png"
+import databaseicon from "./images/databases.jpeg"
+import meditrack from "./images/meditrack.jpeg"
+import blinder from "./images/blinder.png"
+import aura from "./images/aura.jpeg"
+import javacert from "./images/java.png"
+import jscert from "./images/javascript.png"
+import responsive from "./images/responsive_web.png"
+import Experience from "components/Experience/Experience"
 // Animation
 import Aos from "aos"
 import "aos/dist/aos.css"
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [projects, setProjects] = useState([])
-  const [services, setServices] = useState([])
+  const [projects, setProjects] = useState([
+    {id:"projects",title:"Meditrack",tagline:"A comptrehensive healthcare system",category:"projects",liveUrl:"https://demo.com",repositoryUrl:"https://repo.com",img:meditrack
+    },
+    {id:"projects",title:"Blinder",tagline:"A community blogging platform",category:"projects",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:blinder
+    },
+    {id:"projects",title:"Aura",tagline:"Blood donation app",category:"projects",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:aura
+    },
+    {id:"projects",title:"Java(Basic)",tagline:"HackerRank",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:javacert
+    },
+    {id:"projects",title:"Javascript",tagline:"Udemy",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:jscert
+    },
+    {id:"projects",title:"Responsive web design",tagline:"Free code camp",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:responsive
+    },
+
+  ])
+
+  const [services, setServices] = useState([{title:"programming languages",tags:['C','Java','Javascript','Python'],icon:programmingicon},{title:"Libraries/Frame works",tags:['React Js',"Node js",'Express Js','Material UI'],icon:librayricon},{title:"Tools/Platforms",tags:['Github','Postman','VScode'],icon:toolicon},{title:"Databases",tags:['MongoDB','MySQL'],icon:databaseicon}])
 
   const [testimonials, setTestimonials] = useState([])
 
@@ -73,9 +97,9 @@ function App() {
 
           return null
         })
-        setTestimonials(tempTestimonials)
-        setProjects(tempProjects)
-        setServices(tempServices)
+        // setTestimonials(tempTestimonials)
+        // setProjects(tempProjects)
+        // setServices(tempServices)
       })
       .catch(console.error)
   }, [])
@@ -89,6 +113,8 @@ function App() {
       <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Home />
+      <h1>Experience</h1>
+      <Experience role="software engineer intern" company="gcrs" desc="jai balayya" />
       <Services services={services} />
       <Portfolio projects={projects} />
       <Testimonials testimonials={testimonials} />

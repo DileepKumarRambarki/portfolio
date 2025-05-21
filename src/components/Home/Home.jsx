@@ -38,14 +38,14 @@ const Home = () => {
         animate="animate"
       >
         <h2>Peace be upon you !</h2>
-        <h1>I’m Junaid</h1>
+        <h1>I’m Dileep Kumar</h1>
         <p style={{ fontSize: "1.2rem ", fontWeight: "600" }}>
           I am a
           <span style={{ marginLeft: "8px" }}>
             <Typed
               strings={[
-                "Fullstack Engineer (Stay Gold USA)",
-                "Founder and CEO (Devnito UAE)",
+                "Fullstack Developer",
+                "Cometetive programmer",
               ]}
               typeSpeed={60}
               backSpeed={60}
