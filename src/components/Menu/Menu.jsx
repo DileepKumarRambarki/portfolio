@@ -1,7 +1,7 @@
 import React from "react";
 import "./menu.css";
 // Router
-import { NavLink } from "components/Nav/NavLink/NavLink";
+import { NavLink } from "../Nav/NavLink/NavLink";
 
 const Menu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -9,8 +9,13 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
       <ul>
         <NavLink text="Home" path="home" onClick={() => setMenuOpen(false)} />
         <NavLink
-          text="Services"
-          path="services"
+          text="Experience"
+          path="experience"
+          onClick={() => setMenuOpen(false)}
+        />
+        <NavLink
+          text="Skills"
+          path="skills"
           onClick={() => setMenuOpen(false)}
         />
         <NavLink
@@ -19,8 +24,8 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
           onClick={() => setMenuOpen(false)}
         />
         <NavLink
-          text="Testimonials"
-          path="testimonials"
+          text="Leetcode"
+          path="leetcode"
           onClick={() => setMenuOpen(false)}
         />
         <NavLink

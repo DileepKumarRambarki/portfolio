@@ -11,7 +11,7 @@ import shakeImage from "../../images/shake.svg";
 
 // Components
 import { Heading } from "../Heading/Heading";
-import Button from "components/Button/Button";
+import Button from "../Button/Button";
 
 const Contact = () => {
   const INITIAL_VALUES = { email: "", message: "" };
@@ -25,10 +25,10 @@ const Contact = () => {
   const sendEmail = async () => {
     try {
       const result = await emailjs.sendForm(
-        `gmail`,
-        `emailjs`,
+        `service_54wpk2f`,
+        `template_g2mso5s`,
         form.current,
-        `user_Ar1zI6cvC6aUG82I1aNsA`
+        `OjuOmfzaUO201iGsQ`
       );
       console.log("result ", result.text);
     } catch (error) {

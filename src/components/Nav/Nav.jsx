@@ -8,7 +8,7 @@ import { animateScroll as scroll } from "react-scroll";
 import "./nav.css";
 
 // Components
-import MenuIcon from "components/Menu/MenuIcon/MenuIcon";
+import MenuIcon from "../Menu/MenuIcon/MenuIcon";
 
 const Nav = ({ menuOpen, setMenuOpen }) => {
   const handleClick = () => {
@@ -34,7 +34,7 @@ const Nav = ({ menuOpen, setMenuOpen }) => {
           className={"logo " + (menuOpen && "menuActive")}
           onClick={() => scroll.scrollToTop()}
         >
-          &lt; Junaid /&gt;
+          &lt; Dileep/&gt;
         </span>
 
         <MenuIcon handleClick={handleClick} menuOpen={menuOpen} />

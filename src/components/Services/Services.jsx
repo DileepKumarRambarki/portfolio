@@ -4,8 +4,8 @@ import React from "react";
 import "./services.css";
 
 // Card
-import { ServicesCard } from "components/Services/ServicesCard/ServicesCard";
-import { Heading } from "components/Heading/Heading";
+import { ServicesCard } from "../Services/ServicesCard/ServicesCard";
+import { Heading } from "../Heading/Heading";
 
 const Services = ({ services }) => {
   return (
@@ -13,15 +13,15 @@ const Services = ({ services }) => {
       data-aos="fade-right"
       className="services-container"
       name="services"
-      id="services"
+      id="skills"
     >
-      <Heading text="Services" />
+      <Heading text="Skills" />
       <div className="services-cards">
         {services &&
           services?.map(({ title, icon, tags }, index) => (
             <ServicesCard
               key={index}
-              image={icon.asset.url}
+              image={icon}
               title={title}
               tags={tags}
             />
