@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import "./testimonials.css";
 
 // Icon
-import testimonialSVG from "images/review.png";
+import testimonialSVG from "../../images/review.png";
 
 // components
-import { Heading } from "components/Heading/Heading";
+import { Heading } from "../Heading/Heading";
 import Testimonial from "./Testimonial/Testimonial";
 
 const Portfolio = ({ testimonials }) => {

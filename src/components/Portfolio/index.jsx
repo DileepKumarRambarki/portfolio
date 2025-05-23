@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 import "./portfolio.css"
 
 // components
-import { Heading } from "components/Heading/Heading"
+import { Heading } from "../Heading/Heading"
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

@@ -2,7 +2,7 @@ import React from "react"
 import Typed from "react-typed"
 
 // SVG
-import man from "images/dev.svg"
+import man from "../../images/dev.svg"
 
 // Animation
 import { Link } from "react-scroll"
@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 
 // CSS
 import "./home.css"
-import Button from "components/Button/Button"
+import Button from "../Button/Button"
 
 const contentVariants = {
   initial: {

@@ -1,11 +1,11 @@
 import React from 'react';
 import "./Experience.css"
 import ExpCard from "./ExpCard.jsx"
-import { Heading } from "components/Heading/Heading";
+import { Heading } from "../Heading/Heading.jsx";
 const Experience = ({exps}) => {
   // const exps=props.exps;
   return (
-    <div className='exp-container'>
+    <div className='exp-container' id="experience">
     <Heading text="Experience" />
     <div className='exp-box'>
       {
