@@ -49,11 +49,11 @@ export default function Piechart() {
       highlightScope: { fade: 'global', highlight: 'item' },
       faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
       valueFormatter,
-      innerRadius: 20,       // Optional: donut-style
-      outerRadius: 100,      // Increases pie size
-      // arcLabel: (item) => `${item.label}: ${item.value}`, // Custom label format
-      arcLabelMinAngle: 10,  // Only show labels on slices with angle > 10°
-      labelOffset: 20        // Pushes labels outside the pie
+      innerRadius: 20,       
+      outerRadius: 100,   
+      
+      arcLabelMinAngle: 10, 
+      labelOffset: 20       
     },
   ]}
   interaction="highlight"
