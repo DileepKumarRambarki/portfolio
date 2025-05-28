@@ -58,9 +58,7 @@ function App() {
 
   // const [testimonials, setTestimonials] = useState([])
   const exps=[
-    { role:"CEO", company:"Sonic solutions", location:"WasingTon DC", icon:gcrs, duration:"jan 2020-feb 2022", desc:['gained hands on experience on backend developement using python','explored google cloud storage buckets using python','enhanced api response time by 80%'] },
-    { role:"Software engineer intern", company:"Geo Climate Risk solutions", location:"Onsite visakhapatnam", icon:gcrs, duration:"May 2025-July 2025", desc:['gained hands on experience on backend developement using python','explored google cloud storage buckets using python','enhanced api response time by 80%'] },
-    { role:"Software engineer intern", company:"Geo Climate Risk solutions", location:"Onsite visakhapatnam", icon:gcrs, duration:"May 2025-July 2025", desc:['gained hands on experience on backend developement using python','explored google cloud storage buckets using python','enhanced api response time by 80%'] },
+    { role:"Software engineer intern", company:"Geo Climate Risk solutions", location:"Onsite visakhapatnam", icon:gcrs, duration:"May 2025-July 2025", desc:['Gained hands-on experience in backend development with Python, working on real-world geospatial data systems.','Integrated and managed Google Cloud Storage buckets using Python for scalable data handling and storage automation.','Optimized API performance, reducing response time by up to 80% through improved query logic and efficient data handling techniques'] },
 
   ]
 

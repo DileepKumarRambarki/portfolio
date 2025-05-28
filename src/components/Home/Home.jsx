@@ -1,6 +1,6 @@
 import React from "react"
 // import {Typed} from "react-typed"
-
+import TypingText from "./TypingText"
 // SVG
 import man from "../../images/dev.svg"
 
@@ -40,17 +40,9 @@ const Home = () => {
         <h2>Peace be upon you !</h2>
         <h1>I’m Dileep Kumar</h1>
         <p style={{ fontSize: "1.2rem ", fontWeight: "600" }}>
-          I am a MERN Stack developer
+          I am a 
           <span style={{ marginLeft: "8px" }}>
-            {/* <Typed
-              strings={[
-                "Fullstack Developer",
-                "Cometetive programmer",
-              ]}
-              typeSpeed={60}
-              backSpeed={60}
-              loop
-            /> */}
+            <TypingText texts={["Fullstack Developer", "Competitive Programmer"]}/>
           </span>
         </p>
         <Link

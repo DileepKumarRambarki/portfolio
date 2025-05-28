@@ -58,6 +58,10 @@
   font-size: 1rem;
   color: #575757;
 }
+.location{
+  font-style: italic;
+  font-weight: 100;
+}
 .exp-container{
   width:100%;
   display: flex;
