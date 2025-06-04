@@ -149,6 +149,7 @@
   perspective: 30rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  margin-right: 50px;
 }
 #resume-button a{
   font-family: nunito;
@@ -190,8 +191,12 @@
   }
 }
 #button-container{
-  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width:500px) {
+  #resume-button{
+    display: none;
+  }
 }

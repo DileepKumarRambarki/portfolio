@@ -50,15 +50,14 @@ export default function Piechart() {
       faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
       valueFormatter,
       innerRadius: 20,       
-      outerRadius: 100,   
-      
+      outerRadius: 120,
       arcLabelMinAngle: 10, 
-      labelOffset: 20       
+      labelOffset: 0       
     },
   ]}
   interaction="highlight"
   height={300}
-  width={450}
+  width={280}
 />
       </div>
     <div className='total'>
