@@ -68,12 +68,10 @@ const Portfolio = ({ projects }) => {
             <div className="column" key={index}>
               <img src={item?.img} alt={item.title} />
               <div className="overlay">
-                <div className="left">
-                  <h3>{item.title}</h3>
-                  {item.tagline && <p>{item.tagline}</p>}
-                </div>
+
                 <div className="right">
-                  {item.repositoryUrl !== "private" ? (
+                  <h3>{item.title}</h3>
+                  {item.category =="projects" && (
                     <a href={item.repositoryUrl}>
                       <FontAwesomeIcon
                         icon={faGithubSquare}
@@ -81,16 +79,6 @@ const Portfolio = ({ projects }) => {
                         className="icon"
                         style={{ marginRight: "0.3em" }}
                         title="Github Repo"
-                      />
-                    </a>
-                  ) : (
-                    <a href="#_">
-                      <FontAwesomeIcon
-                        icon={faUserLock}
-                        size="2x"
-                        className="icon"
-                        style={{ marginRight: "0.3em" }}
-                        title="Private Repo"
                       />
                     </a>
                   )}
@@ -118,6 +106,19 @@ const Portfolio = ({ projects }) => {
                       />{" "}
                     </a>
                   )}
+                  
+                </div>
+                <div className="left">
+                  {Array.isArray(item.tagline)&&item.tagline.length>0 && (
+                    <div>
+                      {
+                        item.tagline.map((tag)=>(
+                            <p>-{tag}</p>
+                          )
+                        )
+                      }
+                    </div>
+                    )}
                 </div>
               </div>
             </div>

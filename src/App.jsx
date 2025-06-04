@@ -15,7 +15,7 @@ import librayricon from "./images/libraries.png"
 import toolicon from "./images/tools.png"
 import databaseicon from "./images/databases.jpeg"
 import blinder from "./images/blinder.png"
-import aura from "./images/aura.jpeg"
+import aura from "./images/aura.png"
 import javacert from "./images/java.png"
 import jscert from "./images/javascript.png"
 import responsive from "./images/responsive_web.png"
@@ -32,19 +32,19 @@ import "aos/dist/aos.css"
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const projects = [
-    {id:"projects",title:"Meditrack",tagline:"A comptrehensive healthcare system",category:"projects",liveUrl:"https://demo.com",repositoryUrl:"https://repo.com",img:meditrack
+    {id:"projects",title:"Meditrack",tagline:["Developed a healthcare management system to streamlining hospital appointment scheduling and health record management.","Built with MUI for a responsive and user-friendly frontend",'Enabled seamless appointment booking for patients and efficient record management for healthcare providers.'],category:"projects",liveUrl:"https://demo.com",repositoryUrl:"https://github.com/DileepKumarRambarki/meditrack",img:meditrack
     },
-    {id:"projects",title:"Blinder",tagline:"A community blogging platform",category:"projects",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:blinder
+    {id:"projects",title:"Blinder",tagline:["Designed a blogging platform enabling college students to share insights on career growth and academics.","Integrated email verification with Nodemailer to reduce fake account registrations.",'Utilized MongoDB and JWT for data persistence and user management.','Gained 100+ active users within the first month of launch.'],category:"projects",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://github.com/DileepKumarRambarki/gvpBlind",img:blinder
     },
-    {id:"projects",title:"Aura",tagline:"Blood donation app",category:"projects",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:aura
+    {id:"projects",title:"Aura",tagline:["Developed a blood donation platform that allows users to easily donate and request blood.",'Backend built with MySQL for efficient data storage and retrieval.','Integrated real-time notifications to alert users of donation requests and availability.','Integrated Google OAuth for seamless login and signup experience.'],category:"projects",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://github.com/bharadwaj-dasari/Aura.git",img:aura
     },
-    {id:"projects",title:"Java(Basic)",tagline:"HackerRank",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:javacert
+    {id:"projects",title:"Java(Basic)",tagline:[],category:"certificates",liveUrl:"https://www.hackerrank.com/certificates/9f197a36ea07",repositoryUrl:"https://repo.com",img:javacert
     },
-    {id:"projects",title:"Javascript",tagline:"Udemy",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:jscert
+    {id:"projects",title:"Javascript",tagline:[],category:"certificates",liveUrl:"https://udemy-certificate.s3.amazonaws.com/image/UC-5de66aa8-3b17-440f-b04f-699c182c29ff.jpg",repositoryUrl:"https://repo.com",img:jscert
     },
-    {id:"projects",title:"Responsive web design",tagline:"Free code camp",category:"certificates",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:responsive
+    {id:"projects",title:"Responsive web design",tagline:[],category:"certificates",liveUrl:"https://www.freecodecamp.org/certification/dileepkumarrambarki/responsive-web-design",repositoryUrl:"https://repo.com",img:responsive
     },
-    {id:"projects",title:"Qualified GATE-2025 (CS) with AIR 4862",tagline:"hi",category:"achievements",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:gate
+    {id:"projects",title:"Qualified GATE-2025 (CS) with AIR 4862",tagline:[],category:"achievements",liveUrl:"https://gvpblind-pi69.onrender.com/",repositoryUrl:"https://repo.com",img:gate
     },
 
   ]
